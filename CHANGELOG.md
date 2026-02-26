@@ -1,0 +1,13 @@
+# Changelog
+
+## [0.1.0](https://github.com/dawsonbooth/predex/compare/predex-v0.0.1...predex-v0.1.0) (2026-02-26)
+
+
+### Features
+
+* initial implementation ([100394d](https://github.com/dawsonbooth/predex/commit/100394d51d237efac96ef1d66df594e639949c6c))
+
+
+### Miscellaneous
+
+* prepare release ([876e31b](https://github.com/dawsonbooth/predex/commit/876e31b818fb390fdc928859be2b7cb4861843b6))

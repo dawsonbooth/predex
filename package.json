@@ -1,6 +1,6 @@
 {
   "name": "predex",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Regex-like pattern matching for arbitrary sequences using predicate functions",
   "keywords": [
     "matching",
