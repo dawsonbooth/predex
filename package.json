@@ -1,0 +1,36 @@
+{
+  "name": "predex",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bun run clean && bun run build:esm && bun run build:cjs && bun run build:types",
+    "build:esm": "bun build src/index.ts --outdir dist --format esm --sourcemap=external",
+    "build:cjs": "bun build src/index.ts --outdir dist --format cjs --sourcemap=external --entry-naming='[dir]/[name].cjs'",
+    "build:types": "tsgo -p tsconfig.build.json",
+    "prepublishOnly": "bun run build",
+    "format": "oxfmt",
+    "lint:format": "oxfmt --check",
+    "lint:code": "oxlint",
+    "lint:types": "tsgo --noEmit"
+  },
+  "devDependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20260225.1",
+    "bun-types": "latest",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0"
+  }
+}
